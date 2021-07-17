@@ -9,7 +9,8 @@ sapply(covid_alterado, function(x) sum(is.nan(x)))
 covid_alterado2<-covid_alterado %>% mutate_all(replace_na,2021)
 
 # Excluindo os missings
-covid_alterado2<-covid_alterado2 %>% filter(semana_epidem!=2021)
+covid_alterado2 %>% na.omit
+covid_alterado2<-drop.na(covid_alterado2)
 
 # substituir os valores missing
 covid_alterado2$semana_epidem[covid_alterado2$data >= '2021-01-01' & 
