@@ -14,5 +14,4 @@ covid_alterado2 %>% na.omit
 covid_alterado2<-drop.na(covid_alterado2)
 
 # substituir os valores missing
-covid_alterado2$semana_epidem[covid_alterado2$data >= '2021-01-01' & 
-                                covid_alterado2$data <= '2021-01-07'] <- 54
+covid_alterado2$semana_epidem[covid_alterado2$data >= '2021-01-01' & covid_alterado2$data <= '2021-01-07'] <- 54
