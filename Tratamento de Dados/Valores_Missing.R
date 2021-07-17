@@ -5,11 +5,12 @@ sapply(covid_alterado, function(x) sum(is.na(x)))
 # NAN not a number (valores indefinidos)
 sapply(covid_alterado, function(x) sum(is.nan(x)))
 
-# Onde for NA mudar todos os valores por um número
+# Onde for NA mudar todos os valores por um nÃºmero
 covid_alterado2<-covid_alterado %>% mutate_all(replace_na,2021)
 
 # Excluindo os missings
 covid_alterado2 %>% na.omit
+# Ou
 covid_alterado2<-drop.na(covid_alterado2)
 
 # substituir os valores missing
