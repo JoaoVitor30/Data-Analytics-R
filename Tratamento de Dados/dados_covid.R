@@ -13,6 +13,6 @@ glimpse(dados_covid2)
 dados_covid2$semana_epidem<-as.integer(dados_covid2$semana_epidem)
 dados_covid2$data<-as.Date(dados_covid2$data,format = "%Y-%m-%d")
 
-dados_covid2["idoso"]<-100*dados_covid2$pop_60/dados_covid2$pop
+dados_covid2["porcentagem_idoso"]<-100*dados_covid2$pop_60/dados_covid2$pop
 
 write.table(dados_covid2,file = "dados_covid.csv",sep = ",")
